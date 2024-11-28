@@ -28,11 +28,15 @@ RouteTranslator.config do |config|
   # config.generate_unnamed_unlocalized_routes = false
 
   # Force the locale to be hidden on generated route paths
-  # config.hide_locale = false
+  config.hide_locale = true
 
   # Set `I18n.locale` based on `request.host`. Useful for apps accepting
   # requests from more than one domain. See Readme for more details
-  # config.host_locales = {}
+  config.host_locales = {
+    "*.pl"                 => :pl,
+    "*.de"                 => :de,
+    "*.cz"                 => :cz
+  }
 
   # The param key used to set the locale to the newly generated routes
   # config.locale_param_key = :locale
